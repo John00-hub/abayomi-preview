@@ -2965,7 +2965,26 @@ html{--font-serif:'OASerif','OASerif',Georgia,serif;--font-sans:'OASans','Inter'
         .theme-seg{margin-left:0!important}
         .nav-hamburger{margin-left:0!important}
       }
-    </style>
+    
+    /* ===== READABILITY PASS (measured, not guessed) ===== */
+    /* labels + numbers were --brand on dark = 2.87:1 */
+    .section-label { font-size: 0.76rem; letter-spacing: 0.28em; font-weight: 700; color: var(--gold); }
+    .practice-number { font-size: 0.78rem; font-weight: 700; color: var(--gold); }
+    .section-label[style] { color: var(--gold) !important; }
+
+    /* body copy: bigger and lighter than #89837B */
+    :root { --stone: #B3ACA3; --ash: #B3ACA3; }
+    html[data-theme="light"] { --stone: #5F564C; --ash: #5F564C; }
+    .practice-description, .dispute-panel-copy, .team-bio, .firm-copy,
+    .faq-item p, .location-sub, .contact-copy, .ip-copy {
+        font-size: 0.95rem; font-weight: 400; line-height: 1.75; color: var(--stone);
+    }
+    .practice-description { max-width: 560px; }
+    .faq-item summary { font-size: 22px; }
+    .team-role { font-size: 11px !important; letter-spacing: 0.14em; font-weight: 600; }
+    .hours-row { font-size: 0.9rem; }
+    .hours-day { font-weight: 600; }
+</style>
 <script>
 /* set the theme before the first paint so there is no dark->light flash */
 (function(){
@@ -3213,16 +3232,16 @@ html{--font-serif:'OASerif','OASerif',Georgia,serif;--font-sans:'OASans','Inter'
                     <p class="team-bio">Founder and head of chambers. Reviews every file, leads the litigation and civil instructions, and is the person a client escalates to.</p>
                 </article>
                 <article class="team-card reveal">
-                    <div class="team-monogram" aria-hidden="true">T</div>
-                    <h3 class="team-name">Timilehin</h3>
-                    <p class="team-role">Counsel &middot; Team Lead</p>
-                    <p class="team-bio">Litigation, civil matters and contentious instructions before the courts, working with the Managing Counsel on trial preparation and appearances.</p>
-                </article>
-                <article class="team-card reveal">
                     <div class="team-monogram" aria-hidden="true">HC</div>
                     <h3 class="team-name">Head of Chambers</h3>
                     <p class="team-role">Practice Coordination</p>
                     <p class="team-bio">Client intake, records, scheduling and chambers administration. The first point of contact for a new instruction.</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-monogram" aria-hidden="true">T</div>
+                    <h3 class="team-name">Timilehin</h3>
+                    <p class="team-role">Counsel &middot; Team Lead</p>
+                    <p class="team-bio">Litigation, civil matters and contentious instructions before the courts, working with the Managing Counsel on trial preparation and appearances.</p>
                 </article>
                 <article class="team-card reveal reveal-delay-2">
                         <div class="team-monogram" aria-hidden="true">C</div>
@@ -3242,7 +3261,7 @@ html{--font-serif:'OASerif','OASerif',Georgia,serif;--font-sans:'OASans','Inter'
                         <p class="team-role">Intake &middot; Records</p>
                         <p class="team-bio">Takes the first call, opens the file, keeps the diary and makes sure nothing a client sends goes unacknowledged.</p>
                     </article>
-            </div>
+                </div>
         </div>
     </section>
 
