@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://john00-hub.github.io/abayomi-preview/sitemap.xml
