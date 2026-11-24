@@ -1400,7 +1400,8 @@
 /* set the theme before the first paint so there is no dark->light flash */
 (function(){
   try{
-    var saved=localStorage.getItem('oa5');
+    var isPhone = window.matchMedia && window.matchMedia('(max-width:768px)').matches;
+    var saved = isPhone ? null : localStorage.getItem('oa5');
     var mode=saved;
     if(!mode){
       try{
@@ -1700,12 +1701,12 @@
 
                 <article class="team-card reveal">
                     <div class="team-portrait" aria-hidden="true"><span>FO</span></div>
-                    <h3 class="team-name">Faramibi Victoria Olowe</h3>
+                    <h3 class="team-name">Feranmi Victoria Olowe</h3>
                     <p class="team-role">Associate Counsel</p>
                     <p class="team-bio">The most junior associate at chambers &mdash; research, drafting and the file work that supports every matter.</p>
                     <button class="team-more" type="button" aria-expanded="false">Read More</button>
                     <div class="team-extra" hidden>
-                        <p>Faramibi prepares the written opinions, pleadings and drafts a matter rests on, and keeps the authorities on a file current as it moves. She works under the counsel who has conduct of the matter.</p>
+                        <p>Feranmi prepares the written opinions, pleadings and drafts a matter rests on, and keeps the authorities on a file current as it moves. She works under the counsel who has conduct of the matter.</p>
                     </div>
                 </article>
 
@@ -1718,9 +1719,9 @@
     <section class="faq" id="faq" aria-label="Common questions">
         <div class="container">
             <div class="faq-head">
-                <p class="section-label reveal">COMMON QUESTIONS</p>
-                <h2 class="section-title reveal">The questions<br><em>clients ask first.</em></h2>
-                <p class="section-subtitle reveal">The questions new clients ask before the first meeting, answered plainly.</p>
+                <p class="section-label reveal">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 class="section-title reveal">Frequently asked<br><em>questions.</em></h2>
+                <p class="section-subtitle reveal">What clients most often ask before instructing chambers, answered plainly.</p>
             </div>
             <div class="faq-grid">
                 <details class="faq-item reveal">
@@ -2238,10 +2239,11 @@
   var r=document.documentElement, seg=document.getElementById('themeSeg');
   if(!seg) return;
   var KEY='oa5';
+  var isPhone = (window.matchMedia && window.matchMedia('(max-width:768px)').matches);
   var btns=seg.querySelectorAll('.seg-btn');
   var meta=document.querySelector('meta[name="theme-color"]');
 
-  function saved(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function saved(){ try{ return isPhone ? null : localStorage.getItem(KEY); }catch(e){ return null; } }
   function systemMode(){
     try{
       if(!window.matchMedia) return null;
