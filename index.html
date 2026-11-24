@@ -8,7 +8,11 @@
     <meta property="og:title" content="O. Abayomi & Associates | Law Firm in Ibadan, Nigeria">
     <meta property="og:description" content="A full service law firm in Ibadan, Nigeria, providing litigation, civil claims, mediation and arbitration.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="img/hero.jpg">
+    <meta property="og:image" content="https://john00-hub.github.io/abayomi-preview/img/hero.jpg">
+    <meta property="og:url" content="https://john00-hub.github.io/abayomi-preview/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://john00-hub.github.io/abayomi-preview/img/hero.jpg">
+    <link rel="canonical" href="https://john00-hub.github.io/abayomi-preview/">
     <meta name="theme-color" content="#0B0A0C">
 
     
@@ -53,9 +57,9 @@
        One stylesheet. Charcoal field, oxblood ink, brass foil, parchment.
        ===================================================================== */
 
-    @font-face{font-family:'OASerif';src:url('fonts/Playfair.ttf') format('truetype');font-weight:300 800;font-style:normal;font-display:swap}
-    @font-face{font-family:'OASerif';src:url('fonts/PlayfairItalic.ttf') format('truetype');font-weight:300 800;font-style:italic;font-display:swap}
-    @font-face{font-family:'OASans';src:url('fonts/Inter.ttf') format('truetype');font-weight:300 700;font-style:normal;font-display:swap}
+    @font-face{font-family:'OASerif';src:url('fonts/Playfair.woff2') format('woff2');font-weight:300 800;font-style:normal;font-display:swap}
+    @font-face{font-family:'OASerif';src:url('fonts/PlayfairItalic.woff2') format('woff2');font-weight:300 800;font-style:italic;font-display:swap}
+    @font-face{font-family:'OASans';src:url('fonts/Inter.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
 
     :root{
       /* ---- field ---- */
@@ -1331,7 +1335,17 @@
     /* legacy elements no longer used */
     .hero-visual,.hero-accent-line,.hero-vertical-text{display:none}
 
-    </style>
+    
+    /* ===== 44px tap targets ===== */
+    .practice-arrow{ width:46px !important; height:46px !important; }
+    .see-more{ min-height:44px !important; display:inline-flex !important; align-items:center; }
+    .statement-link{ min-height:44px !important; }
+    .mm-close{ min-height:44px !important; padding:12px 14px !important; }
+    .seg-btn{ min-height:44px !important; min-width:44px !important; }
+    .nav-logo{ min-height:44px !important; }
+    .footer-col li a{ display:inline-flex; align-items:center; min-height:44px; }
+    .mobile-menu-links a{ padding-block:10px !important; }
+</style>
 <script>
 /* set the theme before the first paint so there is no dark->light flash */
 (function(){
@@ -1349,6 +1363,8 @@
 })();
 </script>
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="preload" href="fonts/Playfair.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 
@@ -1735,7 +1751,8 @@
                     <p class="contact-copy reveal">
                         Contact O. Abayomi &amp; Associates to enquire about the firm&rsquo;s litigation, civil or dispute-resolution practice.</p>
                     <div class="contact-actions reveal">
-                        <a href="tel:+2347039395019" class="contact-btn contact-btn-call" aria-label="Call the firm at +234 703 939 5019">
+                        <a href="mailto:chambers@abayomilaw.com" class="contact-btn" style="margin-bottom:10px"><i class="fa-solid fa-envelope" aria-hidden="true"></i> EMAIL CHAMBERS</a>
+                    <a href="tel:+2347039395019" class="contact-btn contact-btn-call" aria-label="Call the firm at +234 703 939 5019">
                             <i class="fa-solid fa-phone" aria-hidden="true"></i> CALL +234 703 939 5019
                         </a>
                         <a href="https://wa.me/2347039395019?text=Hello%20O. Abayomi & Associates%20Solicitors%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20legal%20services." target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-whatsapp" aria-label="Contact the firm on WhatsApp">
@@ -1807,9 +1824,7 @@
                     </svg>
                     <span class="footer-logo-main">O. ABAYOMI &amp; ASSOCIATES</span>
                     <span class="footer-logo-sub">SOLICITORS</span>
-                    <p class="footer-tagline">
-                        Legal Practitioners &middot; IP Consultants &middot; Mediators &middot; Arbitrators &middot; Company Secretaries &middot; Notaries Public
-                    </p>
+                    <p class="footer-tagline">Legal Practitioners &middot; Litigation &middot; Civil Matters &middot; Mediation &amp; ADR</p>
                 </div>
                 <div class="footer-col">
                     <h3 class="footer-col-title">NAVIGATION</h3>
